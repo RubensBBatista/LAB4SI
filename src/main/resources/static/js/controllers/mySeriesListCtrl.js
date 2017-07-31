@@ -99,7 +99,7 @@ angular.module("mySeriesList").controller("mySeriesListCtrl",function($scope,$ht
   	$scope.salvarNoPerfil = function(serie){
   		$http({
     	  	  method: 'POST',
-    	  	  url: 'https://suaserie.herokuapp.com/perfil/' + $scope.userLogado.id,
+    	  	  url: 'https://suaserie.herokuapp.com/cliente/perfil/' + $scope.userLogado.id,
     	  	  data: serie
     	  	}).then(function successCallback(response) {
     	  	  }, function errorCallback(response) {
@@ -110,7 +110,7 @@ angular.module("mySeriesList").controller("mySeriesListCtrl",function($scope,$ht
   	$scope.salvarNaWatchList = function(serie){
   		$http({
   	  	  method: 'POST',
-  	  	  url: 'https://suaserie.herokuapp.com/watchlist/' + $scope.userLogado.id,
+  	  	  url: 'https://suaserie.herokuapp.com/cliente/watchlist/' + $scope.userLogado.id,
   	  	  data: serie
   	  	}).then(function successCallback(response) {
   	  	  }, function errorCallback(response) {
